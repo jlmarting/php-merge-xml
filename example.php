@@ -55,7 +55,7 @@ function FileMerge(MergeXML $xml) {
     $rtn = 'Minimum 2 files are required';
   } else {
     $rtn = $xml->Get(1);
-    header("Content-Type: text/plain; charset={$xml->dom->encoding}");
+    header("Content-Type: text/plain; charset={".$xml->dom->encoding."}");
    }
   return $rtn;
 }
